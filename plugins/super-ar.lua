@@ -200,11 +200,11 @@ local function unlock_group_ads(msg, data, target)
   end
   local group_ads_lock = data[tostring(target)]['settings']['lock_ads']
   if group_ads_lock == 'no' then
-    return 'تـــم ✅ قـــفـــل 🔐الـــروابــــط 🎈 لـــا تـــلــح😑 \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تـــم ✅ فـــتـــح 🔐الـــروابــــط 🎈 لـــا تـــلــح😑 \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
   else
     data[tostring(target)]['settings']['lock_ads'] = 'no'
     save_data(_config.moderation.data, data)
-    return '#تـمـ⚠️ فـتـحـ #الـروابـط فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تـــم ✅فـــتـــح 🔓 الــروابــــط هــــنــا🎈\n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     end
 end
 --------------------------------
@@ -214,11 +214,11 @@ local function lock_group_spam(msg, data, target)
   end
   local group_spam_lock = data[tostring(target)]['settings']['lock_spam']
   if group_spam_lock == 'yes' then
-    return '#الـكـلـايـش بـالـتـاكـيـد #تـمـ☑️ قـفـلـهـا فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تـــم✅قـــفــــل🔐 الــــکـــــلایـــــش هــــنــــا🎈 \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     else
     data[tostring(target)]['settings']['lock_spam'] = 'yes'
     save_data(_config.moderation.data, data)
-    return '#تـمـ☑️ قـفـلـ #الـكـلـايـش فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return ' تـــم ☑️قـــفــــل🔐 الـــکـــلایـــش بـــنــجـــاح🌟\n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     end
 end
 
@@ -228,11 +228,11 @@ local function unlock_group_spam(msg, data, target)
   end
   local group_spam_lock = data[tostring(target)]['settings']['lock_spam']
   if group_spam_lock == 'no' then
-    return '#الـكـلـايـش بـالـتـاكـيـد #تـمـ⚠️ فـتـحـهـا فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تــــم☑️فـــتـــح 🔓الـــکـــــلایــــش لـــاتـــلــح \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     else
     data[tostring(target)]['settings']['lock_spam'] = 'no'
     save_data(_config.moderation.data, data)
-    return '#تـمـ⚠️ فـتـحـ #الـكـلـايـش فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تـــــم✅فـــتــح 🔓الــکـــلایـــش هــــنــــا \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     end
 end
 ---------------------------------
@@ -242,11 +242,11 @@ local function lock_group_flood(msg, data, target)
   end
   local group_flood_lock = data[tostring(target)]['settings']['flood']
   if group_flood_lock == 'yes' then
-    return '#الـتـكـرار بـالـتـاكـيـد #تـمـ☑️ قـفـلـهـا فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تــــم☑️قـــفـــل الـــتـــکـــرار ⭐️لــاتـــلـــح🎈 \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     else
     data[tostring(target)]['settings']['flood'] = 'yes'
     save_data(_config.moderation.data, data)
-    return '#تـمـ☑️ قـفـلـ #الـتـكـرار فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تـــم✅قـــفــل الـــتــکـــرار🌟هـــنـــا🎈 \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     end
 end
 
@@ -256,11 +256,11 @@ local function unlock_group_flood(msg, data, target)
   end
   local group_flood_lock = data[tostring(target)]['settings']['flood']
   if group_flood_lock == 'no' then
-    return '#الـتـكـرار بـالـتـاكـيـد #تـمـ⚠️ فـتـحـهـا فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تـــم☑️فـــتــــح الــتـــکــرار🌟لـــاتـــلـــح \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     else
     data[tostring(target)]['settings']['flood'] = 'no'
     save_data(_config.moderation.data, data)
-    return '#تـمـ⚠️ فـتـحـ #الـتـكـرار فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تــــم فـــتـــح الـــتـــکــرار🌟هـــنــــا\n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     end
 end
 ---------------------------------
@@ -270,7 +270,7 @@ local function lock_group_arabic(msg, data, target)
   end
   local group_arabic_lock = data[tostring(target)]['settings']['lock_arabic']
   if group_arabic_lock == 'yes' then
-    return '#الـعـربـيـه بـالـتـاكـيـد #تـمـ☑️ قـفـلـهـا فـي \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
+    return 'تــــم✅قـــفــل الـلــغــة الــعــربـیـة لــا تــلـــح🎈 \n| '..msg.to.title..' |\n#بواسطه |❗️| (@'..(msg.from.username or 'لا يوجد')..')\n'
     else
     data[tostring(target)]['settings']['lock_arabic'] = 'yes'
     save_data(_config.moderation.data, data)
