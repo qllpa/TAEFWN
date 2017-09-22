@@ -249,7 +249,7 @@ function create_config( )
     "super-ar",
     "warnall",
     },
-    sudo_users = {67369633},--Sudo users
+    sudo_users = {221117424},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[]],
     help_text_realm = [[
