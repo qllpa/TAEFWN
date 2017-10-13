@@ -244,7 +244,6 @@ function create_config( )
     "replay",
     "robot",
     "save",
-    "set_time",
     "wlc",
     "super-ar",
     "warnall",
